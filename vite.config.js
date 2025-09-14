@@ -1,4 +1,7 @@
 import { defineConfig } from 'vite';
+import injectHTML from 'vite-plugin-html-inject';
+import { ViteMinifyPlugin } from 'vite-plugin-minify';
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 export default defineConfig({
   root: './src',
   server: {
@@ -9,4 +12,19 @@ export default defineConfig({
     outDir: '../dist',
     emptyOutDir: true,
   },
+  plugins: [
+    injectHTML(),
+    ViteMinifyPlugin(),
+    ViteImageOptimizer({
+      png: {
+        quality: 80,
+      },
+      jpeg: {
+        quality: 80,
+      },
+      jpg: {
+        quality: 80,
+      },
+    }),
+  ],
 });
