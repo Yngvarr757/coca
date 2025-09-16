@@ -11,6 +11,12 @@ export default defineConfig({
   build: {
     outDir: '../dist',
     emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: './src/index.html',
+        about: './src/about.html',
+      },
+    },
   },
   plugins: [
     injectHTML(),

@@ -33,7 +33,7 @@
   }
 
   &::after {
-    top: calc(100% - var(--burger-line-height));
+    top: calc(99% - var(--burger-line-height));
     transition:
       transform 0.2s,
       top 0.2s 0.2s;

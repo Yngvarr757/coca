@@ -5,7 +5,7 @@
     "**/*.js",
     "**/*.md",
     "**/*.json",
-    ".eslintrc.cjs",
+    ".eslint.config.js",
     "./src/scss/base/normalize.scss"
   ],
   "rules": {
