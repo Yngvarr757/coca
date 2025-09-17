@@ -34,7 +34,7 @@
       position: fixed;
       top: 0;
       left: -50vw;
-      z-index: var(--z-index-3);
+      z-index: var(--z-inedx-4);
       flex-direction: column;
       justify-content: center;
       width: 80dvw;
@@ -88,13 +88,18 @@
 
     &-text {
       position: absolute;
-      top: -22px;
+      top: -25px;
       left: 50%;
       font-weight: 600;
       line-height: 150%;
       text-align: center;
       color: var(--neutral-color-100);
       transform: translateX(-50%);
+
+      @include small-tablet {
+        top: -28px;
+        font-size: 20px;
+      }
     }
   }
 }
@@ -115,6 +120,11 @@
     line-height: 162%;
     color: var(--neutral-color-100);
     transition: all var(--transition);
+
+    @include small-tablet {
+      font-size: 20px;
+      line-height: 200%;
+    }
 
     &::after {
       content: '';
