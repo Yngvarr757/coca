@@ -62,6 +62,12 @@
     }
   }
 
+  &__left {
+    @include mini-desktop {
+      max-width: 617px;
+    }
+  }
+
   &__container {
     @include flex-between;
     position: relative;
@@ -73,10 +79,6 @@
       align-items: center;
       text-align: center;
     }
-  }
-
-  &__left {
-    max-width: 599px;
   }
 
   &__title {
@@ -105,6 +107,12 @@
 
   &__subtitle {
     margin-bottom: 69px;
+
+    & br {
+      @include small-desktop {
+        display: none;
+      }
+    }
   }
 
   &__form {
@@ -231,10 +239,11 @@
     }
 
     &-body {
-      &-th {
+      &-td {
         font-weight: 700;
         font-size: 20px;
         line-height: 130%;
+        white-space: nowrap;
         color: #fff;
 
         &:nth-child(1) {
